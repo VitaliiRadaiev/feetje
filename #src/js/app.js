@@ -15,6 +15,10 @@ window.addEventListener('load', function () {
 			if(header) {
 				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
 				setPedding();
+				let id = setInterval(setPedding, 200);
+				setTimeout(() => {
+					clearInterval(id);
+				},1000)
 				window.addEventListener('resize', setPedding);
 			}
 			
@@ -24,11 +28,12 @@ window.addEventListener('load', function () {
 
 	@@include('_function.js');
 	@@include('forms.js');
-	@@include('../common/checkbox/checkbox.js');
 	@@include('../common/header/header.js');
 	@@include('../common/promo-header/promo-header.js');
 	@@include('../common/our-history/our-history.js');
 	@@include('../common/instagram/instagram.js');
+	@@include('../common/products-card/products-card.js');
+	@@include('../common/filter/filter.js');
 	//@@includ e('../common/popup/popup.js');
 
 

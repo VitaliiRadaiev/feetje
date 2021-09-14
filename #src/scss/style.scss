@@ -413,12 +413,15 @@ textarea {
 @import "../common/cards/cards";
 @import "../common/our-history/our-history";
 @import "../common/instagram/instagram";
+@import "../common/products-card/products-card";
+@import "../common/products-card/products-card";
+@import "../common/pagination/pagination";
+@import "../common/filter/filter";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 
-// ==== HOME =====================================================
 @import "pages/home";
-// ==== AND HOME =====================================================
+@import "pages/products";
 
 // ==== AND PAGES =====================================================

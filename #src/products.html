@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('_head.html',{
+"title": "New Project"
+})
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    @@include('common/header/_header.html',{})
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page products-page _padding-top">
+
+        <section class="products _parallax">
+            <div class="container">
+                <div class="decor layer" data-depth="0.30">
+					<img src="img/photo/decor.png" alt="">
+				</div>
+                <div class="products__head">
+                    <h1 class="products__title title-1">Collecties</h1>
+                </div>
+                <div class="products__top d-flex flex-wrap justify-content-between align-items-center">
+                    <div class="filter__mob-btn">
+                        <img src="img/icons/filter.svg" alt="">
+                    </div>
+                    <div class="select-wrap">
+                        <div class="select-label">Sort by:</div>
+                        <select name="" class="_select">
+                            <option value="1" selected>Newest</option>
+                            <option value="2">highest price</option>
+                            <option value="3">Lowest price</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="products__body">
+                    <div class="products__col-1">
+                        <div class="filter-wrap">
+                            <div class="filter-close"><span></span></div>
+                            <form action="/" class="filter  _spollers">
+                                <div class="filter__item pb-3">
+                                    <div class="search">
+                                        <input type="text" class="search__input">
+                                        <button type="submit" class="search__btn">
+                                            <img src="img/icons/search.svg" alt="">
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="filter__item bb">
+                                    <ul class="filter__category pb-3">
+                                        <li>
+                                            <a href="#">
+                                                Schoenen
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="active">
+                                                T-Shirts
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Sokken
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Accessories
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__item bb">
+                                    <div class="filter__title _spoller _active">
+                                        Collectie
+                                    </div>
+                                    <ul class="filter__list">
+                                        <li>
+                                            <a href="#">
+                                                Winter 2021
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="active">
+                                                Basiscollectie
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Winter 2021
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                Basiscollectie
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="filter__item bb">
+                                    <div class="filter__title _spoller _active">
+                                        Geslacht
+                                    </div>
+                                    <div class="filter__checkbox-radio-group">
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox" checked>
+                                            <div class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Jongens
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox">
+                                            <div class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Meisjes
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox">
+                                            <div class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Uniseks
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter__item bb">
+                                    <div class="filter__title _spoller _active">
+                                        Kleur
+                                    </div>
+                                    <div class="filter__checkbox-radio-group">
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox" checked>
+                                            <div style="background-color: #282727;" class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Zwart
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox" checked>
+                                            <div style="background-color: #4565DB;" class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Blauw
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox">
+                                            <div style="background-color: #FCD400;" class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Geel
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox">
+                                            <div style="background-color: #F97560;" class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Rood
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox">
+                                            <div style="background-color: #fff; border: 1px solid #DADADA;"
+                                                class="checkbox-radio__square">
+                                                <img src="img/icons/check-dark.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Wit
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="filter__item bb">
+                                    <div class="filter__title _spoller">
+                                        Filter op
+                                    </div>
+                                    <div class="filter__checkbox-radio-group">
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox" checked>
+                                            <div style="background-color: #282727;" class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Zwart
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox" checked>
+                                            <div style="background-color: #4565DB;" class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Blauw
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox">
+                                            <div style="background-color: #FCD400;" class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Geel
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox">
+                                            <div style="background-color: #F97560;" class="checkbox-radio__square">
+                                                <img src="img/icons/check.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Rood
+                                            </div>
+                                        </label>
+                                        <label class="checkbox-radio">
+                                            <input type="checkbox">
+                                            <div style="background-color: #fff; border: 1px solid #DADADA;"
+                                                class="checkbox-radio__square">
+                                                <img src="img/icons/check-dark.svg" alt="">
+                                            </div>
+                                            <div class="checkbox-radio__text">
+                                                Wit
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="products__col-2">
+                        <div class="products__items gx-4 row">
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__images swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-1.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="products-card__title">
+                                        Productnaam
+                                    </div>
+                                    <div class="products-card__text">
+                                        Meer product informatie
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__images swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-3.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="products-card__title">
+                                        Productnaam
+                                    </div>
+                                    <div class="products-card__text">
+                                        Meer product informatie
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__images swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-5.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-6.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="products-card__title">
+                                        Productnaam
+                                    </div>
+                                    <div class="products-card__text">
+                                        Meer product informatie
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__images swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-1.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="products-card__title">
+                                        Productnaam
+                                    </div>
+                                    <div class="products-card__text">
+                                        Meer product informatie
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__images swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-3.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="products-card__title">
+                                        Productnaam
+                                    </div>
+                                    <div class="products-card__text">
+                                        Meer product informatie
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__images swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-5.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-6.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="products-card__title">
+                                        Productnaam
+                                    </div>
+                                    <div class="products-card__text">
+                                        Meer product informatie
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__images swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-1.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-2.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="products-card__title">
+                                        Productnaam
+                                    </div>
+                                    <div class="products-card__text">
+                                        Meer product informatie
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__images swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-3.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-4.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="products-card__title">
+                                        Productnaam
+                                    </div>
+                                    <div class="products-card__text">
+                                        Meer product informatie
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-4">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__images swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-5.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide ibg">
+                                                <img src="img/photo/card-2-img-6.jpg" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <div class="products-card__title">
+                                        Productnaam
+                                    </div>
+                                    <div class="products-card__text">
+                                        Meer product informatie
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="products__bottom">
+                            @@include('common/pagination/_pagging.html', {})
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    @@include('common/footer/_footer.html',{})
+    <!-- == // FOOTER ================== -->
+
+    @@include('_js-bottom.html',{})
+</body>
+
+</html>

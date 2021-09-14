@@ -1,0 +1,111 @@
+.products {
+    padding-top: 68px;
+    background: linear-gradient(180deg, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+    position: relative;
+    margin-bottom: 100px;
+
+    @media (max-width: $md3+px) {
+        padding-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    & > .container {
+        position: relative;
+    }
+
+    & .decor {
+        position: absolute;
+        top: 0;
+        left: 30%;
+        z-index: -1;
+    }
+
+    &__head {
+    }
+
+    &__title {
+        margin-bottom: 43px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+
+    &__body {
+        display: flex;
+
+        @media (max-width: $md2+px) {
+            display: block;
+        }
+    }
+
+    &__col-1 {
+        flex: 0 0 200px;
+        margin-right: 70px;
+
+        @media (max-width: $md2+px) {
+            margin-right: 0;
+            flex: 0 1 auto;
+        }
+    }
+
+    &__col-2 {
+        flex: 1 1 auto;
+        min-width: 0;
+    }
+
+    &__top {
+        margin-bottom: 50px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
+        & > .select-wrap {
+            margin-left: auto;
+        }
+    }
+
+    &__items {
+        min-width: 0;
+
+        & .col-12 {
+            margin-bottom: 87px;
+            min-width: 0;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+
+    &__bottom {
+    }
+}
+
+
+.filter {
+
+    &__mob-btn {
+        display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 61px;
+		width: 61px;
+		border-radius: 50%;
+		padding: 15px;
+		background-color: $mainColor2;
+		transition: all .3s ease;
+
+		& img, & svg {
+			max-width: 100%;
+			max-height: 100%;
+			width: auto;
+			height: auto;
+		}
+
+        @media (min-width: 992px) {
+            display: none;
+        }
+    }
+}
+

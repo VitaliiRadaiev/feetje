@@ -15,6 +15,10 @@ window.addEventListener('load', function () {
 			if(header) {
 				const setPedding = () => wrapper.style.paddingTop = header.clientHeight + 'px';
 				setPedding();
+				let id = setInterval(setPedding, 200);
+				setTimeout(() => {
+					clearInterval(id);
+				},1000)
 				window.addEventListener('resize', setPedding);
 			}
 			
@@ -706,30 +710,6 @@ if(priceSlider) {
 }
 
 // == // PRICE SLIDER =====================================================;
-	(function checkboxHandler() {
-	let $checkboxWrap = document.querySelectorAll('.checkbox-wrap');
-	if($checkboxWrap.length) {
-		$checkboxWrap.forEach((item, index) => {
-			let input = item.querySelector('input[type="checkbox"]');
-			input.checked = true;
-			item.querySelector('.checkbox-wrap__label').setAttribute('for', `_form${index}`)
-			input.id = `_form${index}`;
-			
-			if(input.checked) {
-				item.classList.add('_is-checked');
-			}
-			
-			input.addEventListener('click', () => {
-				if(input.checked) {
-					item.classList.add('_is-checked');
-				} else {
-					item.classList.remove('_is-checked');
-				}
-				
-			})
-		})
-	}
-})();;
 	{
     // === Burger Handler =====================================================================
 	function burgerBtnAnimation(e) {
@@ -896,6 +876,65 @@ if(priceSlider) {
             },
             watchSlidesVisibility: true,
         });
+    }
+};
+	{
+    let productCards = document.querySelectorAll('.products-card__images');
+    if(productCards.length) {
+        productCards.forEach(slider => {
+            let slider_about = new Swiper(slider, {
+                observer: true,
+                observeParents: true,
+                slidesPerView: 1,
+                spaceBetween: 0,
+                autoHeight: true,
+                speed: 800,
+                pagination: {
+                	el: slider.querySelector('.swiper-pagination'),
+                	clickable: true,
+                },
+            });
+        })
+    }
+};
+	{
+    let search = document.querySelector('.search');
+    if(search) {
+        let input = search.querySelector('.search__input');
+        if(input.value.trim()) {
+            search.classList.add('_hasLatter');
+        }
+        input.addEventListener('focus', () => {
+            search.classList.add('_focus');
+        })
+        input.addEventListener('blur', () => {
+            search.classList.remove('_focus');
+        })
+        input.addEventListener('input', (e) => {
+            if(e.target.value.trim()) {
+                search.classList.add('_hasLatter');
+            } else {
+                search.classList.remove('_hasLatter');
+            }
+        })
+    }
+
+
+    let filter = document.querySelector('.filter-wrap');
+    if(filter) {
+        let btn = document.querySelector('.filter__mob-btn');
+        if(btn) {
+            let closeBtn = filter.querySelector('.filter-close');
+
+            btn.addEventListener('click', () => {
+                filter.classList.add('open');
+                document.body.classList.add('lock');
+            })
+            closeBtn.addEventListener('click', () => {
+                filter.classList.remove('open');
+                document.body.classList.remove('lock');
+            })
+        }
     }
 };
 	//@@includ e('../common/popup/popup.js');

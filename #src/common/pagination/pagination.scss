@@ -1,0 +1,48 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 10px;
+
+    @media (max-width: $md4+px) {
+        font-size: 8px;
+    }
+}
+.page-item {
+    flex: 0 0 auto;
+    margin: 0 0.5em;
+    font-size: 1.6em;
+    &.pb-3 {
+        padding-bottom: 0.81em !important;
+    }
+}
+.page-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.14em;
+    min-width: 2.14em;
+    border-radius: 50% !important;
+    border: 1px solid #e7e6e5;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    padding: 0.23em;
+    font-size: 1.31em;
+    line-height: 1.14em;
+    text-align: center;
+    letter-spacing: -0.04em;
+    color: $textColor;
+
+    @media (min-width: 992px) {
+        &:hover:not(.active) {
+            background-color: #e7e6e5;
+            color: $textColor;
+        }
+    }
+
+    &.active {
+        background-color: $textColor;
+        color: $textColorLight;
+        font-weight: 700;
+    }
+}
