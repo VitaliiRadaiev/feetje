@@ -1,0 +1,106 @@
+.card {
+    display: block;
+    border: none;
+    color: $textColor;
+    text-align: center;
+
+    @media (min-width: 992px) {
+        &:hover {
+            color: $textColor;
+        }
+    }
+
+    &.card-2 {
+        position: relative;
+        height: 0;
+        padding-bottom: max(250px, 100%);
+        color: $textColorLight;
+        transition: all 0.3s ease;
+
+        @media (min-width: 992px) {
+            &:hover {
+                color: $textColorLight;
+
+                .card-bg img {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+        & .card-body {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        & .link-arrow-right {
+            font-size: 16px;
+        }
+
+        & .card-title {
+            margin-bottom: 7px;
+        }
+    }
+}
+
+.card-img {
+    padding-bottom: max(220px, 64.34%);
+    overflow: hidden;
+
+    & img {
+        transition: all 1s ease;
+    }
+
+    @media (min-width: 992px) {
+        &:hover {
+            & img {
+                transform: scale(1.03);
+            }
+        }
+    }
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+
+    & img {
+        transition: all 1s ease;
+    }
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 31px;
+    line-height: 1.25em;
+    letter-spacing: 0.02em;
+    margin-bottom: 15px;
+}
+
+h6.card-title {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 1.4em;
+    letter-spacing: -0.04em;
+    text-transform: none;
+}
+
+.card-text {
+    font-size: 21px;
+    line-height: 1.42em;
+    letter-spacing: -0.01em;
+    color: #8c8c8c;
+    margin-bottom: 12px;
+
+    @media (max-width: $md4+px) {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,384 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+	@font-face {
+		font-family: $font_name;
+		font-display: swap;
+		src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+		font-weight: #{$weight};
+		font-style: #{$style};
+	}
+}
+// ==== FONTS ===========================================================================================
+@import "fonts";
+// ==== // FONTS ===========================================================================================
+
+// ==== VARS ===========================================================================================
+@import "vars";
+// ==== // VARS ===========================================================================================
+
+// ==== Normalize ===========================================================================================
+@import "normalize";
+// ==== // НОРМАЛАЙЗ ===========================================================================================
+
+//<MIXINE>===============================================================================================
+@import "mixins.scss";
+//</MIXINE>===============================================================================================
+
+//<ICOMOON>===============================================================================================
+@import "../icomoon/style";
+//</ICOMOON>===============================================================================================
+
+//<FANCYBOX>===============================================================================================
+//@import "plagins/fancybox.scss";
+//<FANCYBOX>===============================================================================================
+
+// ==== PLAGINS ===========================================================================================
+@import "plagins/swiper-bundle";
+//@import "plagins/drift-basic";
+// ==== // PLAGINS ===========================================================================================
+
+// ==== FORM STYLE DEFAULT ===========================================================================================
+@import "forms";
+// ==== FORM STYLE DEFAULT ===========================================================================================
+
+// ==== BORDER ===========================================================================================
+@import "../common/burger/burger";
+// ==== BORDER ===========================================================================================
+
+// ==== POPUP ===========================================================================================
+//@import "common/popup/popup";
+// ==== // POPUP ===========================================================================================
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: 0px;
+}
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,
+:active {
+	outline: none;
+}
+a:focus,
+a:active {
+	outline: none;
+}
+aside,
+nav,
+footer,
+header,
+section {
+	display: block;
+}
+html {
+	font-size: 16px;
+	height: 100%;
+}
+html,
+body {
+	min-width: $minwidth;
+	margin: 0 auto;
+}
+body {
+	line-height: 1;
+	font-family: $mainFontFamily;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	color: $textColor;
+	transition: opacity 0.8s ease;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	min-height: 100%;
+	background: linear-gradient(0deg, #ffffff, #ffffff), #f7f8fc;
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+input,
+button,
+textarea {
+	font-family: $mainFontFamily;
+}
+input::-ms-clear {
+	display: none;
+}
+button {
+	cursor: pointer;
+}
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+ul li {
+	list-style: none;
+}
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.center {
+	text-align: center;
+}
+
+._page {
+	flex: 1 1 auto;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.container {
+	max-width: 1280px !important;
+	margin: 0 auto;
+	padding: 0 40px;
+
+	@media (max-width: 374.98px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+}
+
+.ibg {
+	position: relative;
+	img {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+}
+
+// === title ========================================================================
+.title-1 {
+	font-weight: bold;
+	font-size: 64px;
+	line-height: 1.2em;
+	letter-spacing: -0.04em;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	@media (max-width: $md3+px) {
+		font-size: 44px;
+	}
+}
+.title-2 {
+	font-weight: bold;
+	font-size: 48px;
+	line-height: 1em;
+	letter-spacing: -0.05em;
+
+	@media (max-width: $md3+px) {
+		font-size: 40px;
+	}
+}
+
+.title-3 {
+}
+
+.title-4 {
+}
+
+.title-5 {
+}
+.title-6 {
+}
+
+.suptitle {
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 2.25em;
+	letter-spacing: 0.1em;
+	margin-bottom: 9px;
+}
+.subtitle {
+}
+
+.text {
+	font-size: 24px;
+	line-height: 1.5em;
+	letter-spacing: -0.01em;
+
+	@media (max-width: $md3+px) {
+		font-size: 22px;
+	}
+	@media (max-width: $md4+px) {
+		font-size: 18px;
+	}
+
+	& p {
+		margin-bottom: 1.4em;
+	}
+}
+// === and title ========================================================================
+
+.mb-100 {
+	margin-bottom: 100px;
+	@media (max-width: $md3+px) {
+		margin-bottom: 50px;
+	}
+}
+
+// === btn ========================================================================
+.btn {
+	&.btn-dark {
+		border: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		min-height: 3.21em;
+		background: #323230;
+		border-radius: 87px;
+		padding: 0.71em 2.35em;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 1.14em;
+		letter-spacing: 0.1em;
+		color: #ffffff;
+		text-transform: uppercase;
+		transition: all 0.3s ease;
+
+		@media (min-width: 992px) {
+			&:hover {
+				background-color: $mainColor2;
+				color: $textColor;
+			}
+		}
+	}
+}
+
+// === and btn ========================================================================
+
+.input {
+}
+
+.textarea {
+}
+.link-arrow-right {
+	display: inline-flex;
+	font-weight: bold;
+	font-size: 24px;
+	line-height: 1.5em;
+	letter-spacing: -0.01em;
+	position: relative;
+	padding-right: 15px;
+	color: $textColorLight;
+
+	&:before {
+		font-family: $fontAwesome;
+		position: absolute;
+		font-weight: 600;
+		content: "\f105";
+		top: 55%;
+		right: 0;
+		transform: translateY(-50%);
+		font-size: 0.8em;
+		transition: all 0.3s ease;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: $textColorLight;
+			&:before {
+				transform: translate(5px, -50%);
+			}
+		}
+	}
+}
+.link {
+	font-size: 21px;
+	line-height: 36px;
+	letter-spacing: -0.01em;
+	color: #282727;
+	border-bottom: 1px solid #dbcec4;
+	transition: all 0.3s ease;
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: #8c8c8c;
+		}
+	}
+}
+
+// === TEXT CONTETN BLOCK ========================================================================
+.text-content {
+	& h1 {
+	}
+	& h2 {
+	}
+	& h3 {
+	}
+	& h4 {
+	}
+
+	& h5 {
+	}
+	& h6 {
+	}
+
+	& p {
+	}
+
+	& ul {
+	}
+
+	& ol {
+	}
+
+	& figure {
+	}
+}
+// === and TEXT CONTETN BLOCK ========================================================================
+
+// ==== BLOCKS =====================================================
+@import "../common/header/header";
+@import "../common/footer/footer";
+@import "../common/checkbox/checkbox";
+@import "../common/promo-header/promo-header";
+@import "../common/cards/cards";
+@import "../common/our-history/our-history";
+// ==== BLOCKS =====================================================
+
+// ==== PAGES =====================================================
+
+// ==== HOME =====================================================
+@import "pages/home";
+// ==== AND HOME =====================================================
+
+// ==== AND PAGES =====================================================
