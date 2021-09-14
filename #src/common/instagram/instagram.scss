@@ -1,0 +1,39 @@
+.instagram {
+    margin-bottom: 100px;
+    @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+    }
+    &__title {
+        text-align: center;
+        margin-bottom: 51px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+
+        & > a {
+            display: inline-block;
+            color: $textColor;
+            border-bottom: 2px solid #dbcec4;
+            transition: all 0.3s ease;
+        
+            @media (min-width: 992px) {
+                &:hover {
+                    color: #8c8c8c;
+                }
+            }
+        }
+    }
+
+    &__slider {
+
+        & .swiper-slide {
+            width: 200px;
+            height: 200px;
+        }
+
+        & .swiper-wrapper {
+            transition-timing-function: linear !important;
+        }
+    }
+}

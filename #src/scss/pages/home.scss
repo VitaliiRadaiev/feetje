@@ -95,6 +95,10 @@
 }
 
 .lable-block {
+    margin-bottom: 72px;
+    @media (max-width: $md3+px) {
+        margin-bottom: 30px;
+    }
     &__body {
         position: relative;
         display: flex;

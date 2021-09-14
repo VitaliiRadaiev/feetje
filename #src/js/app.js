@@ -28,6 +28,7 @@ window.addEventListener('load', function () {
 	@@include('../common/header/header.js');
 	@@include('../common/promo-header/promo-header.js');
 	@@include('../common/our-history/our-history.js');
+	@@include('../common/instagram/instagram.js');
 	//@@includ e('../common/popup/popup.js');
 
 
