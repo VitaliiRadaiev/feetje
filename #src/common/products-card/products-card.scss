@@ -5,43 +5,68 @@
     @media (min-width: 992px) {
         &:hover {
             color: $textColor;
+
+            & .products-card__images {
+                & img {
+                    &:last-child {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            & .products-card__lines {
+                & > span {
+                    &:first-child {
+                        background-color: #E7E6E5;
+                        height: 2px;
+                    }
+                    &:last-child {
+                        background-color: $mainColor;
+                        height: 3px;
+                    }
+                }
+            }
         }
     }
 
     &__images {
         width: 100%;
-        min-width: 0;
-        padding-bottom: 19px;
-        margin-bottom: 21px;
+        height: 290px;
+        margin-bottom: 19px;
 
-        & .swiper-slide {
-            height: 290px;
+        & img {
+            transition: all .3s ease;
+
+            &:last-child {
+                opacity: 0;
+            }
         }
+        
+    }
 
-        & .swiper-pagination {
-            bottom: 0;   
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
+    &__lines {
+        margin-bottom: 21px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
 
-            & .swiper-pagination-bullet  {
-                flex: 1 1 auto;
-                max-width: 30px;
-                margin-left: 0;
-                margin-right: 0;
-                height: 2px;
-                border-radius: 1px;
-                opacity: 1;
-                background-color: #E7E6E5;
+        & > span  {
+            flex: 1 1 auto;
+            max-width: 30px;
+            margin-left: 0;
+            margin-right: 0;
+            height: 2px;
+            border-radius: 1px;
+            opacity: 1;
+            background-color: #E7E6E5;
 
-                &:not(:last-child) {
-                    margin-right: 10px;
-                }
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
 
-                &.swiper-pagination-bullet-active {
-                    background-color: $mainColor;
-                    height: 3px;
-                }
+            &:first-child {
+                background-color: $mainColor;
+                height: 3px;
             }
         }
     }
