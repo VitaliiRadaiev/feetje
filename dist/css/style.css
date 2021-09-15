@@ -1688,11 +1688,10 @@ textarea {
   min-height: 3.21em;
   background: #323230;
   border-radius: 87px;
-  padding: 0.71em 2.35em;
+  padding: 0.71em 2.65em;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14em;
-  letter-spacing: 0.1em;
+  font-size: 19px;
+  line-height: 1.21em;
   color: #ffffff;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -1714,10 +1713,10 @@ textarea {
   min-height: 3.21em;
   background: #fff;
   border-radius: 87px;
-  padding: 0.71em 2.35em;
+  padding: 0.71em 2.65em;
   font-weight: bold;
-  font-size: 14px;
-  line-height: 1.14em;
+  font-size: 19px;
+  line-height: 1.21em;
   color: #282727;
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
@@ -1731,6 +1730,18 @@ textarea {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   margin-right: 6px;
+}
+
+.btn > i.fa-chevron-right {
+  margin-right: 0;
+  margin-left: 6px;
+  font-size: 0.7em;
+}
+
+.bg {
+  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#ffffff)), #f7f8fc;
+  background: -o-linear-gradient(bottom, #ffffff, #ffffff), #f7f8fc;
+  background: linear-gradient(0deg, #ffffff, #ffffff), #f7f8fc;
 }
 
 .link-arrow-right {
@@ -1771,6 +1782,28 @@ textarea {
   -webkit-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+.link-back {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.1em;
+  color: #282727;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.link-back:before {
+  display: inline-block;
+  content: "<";
+  color: inherit;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-right: -0.4em;
 }
 
 .social {
@@ -1866,6 +1899,10 @@ textarea {
   margin-left: auto;
   margin-right: 20px;
   text-transform: uppercase;
+  font-size: 14px;
+  padding-left: 2.35em;
+  padding-right: 2.35em;
+  letter-spacing: 0.1em;
 }
 
 .header__body {
@@ -3113,6 +3150,47 @@ h6.card-title {
   height: auto;
 }
 
+.hero {
+  background: -webkit-gradient(linear, left bottom, left top, from(#FFFFFF), to(#FFFFFF)), #F7F8FC;
+  background: -o-linear-gradient(bottom, #FFFFFF, #FFFFFF), #F7F8FC;
+  background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F7F8FC;
+  margin-bottom: 71px;
+  position: relative;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(227, 227, 227, 0.2)), to(rgba(255, 255, 255, 0.2)));
+  background: -o-linear-gradient(left, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+  background: linear-gradient(90deg, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+}
+
+.hero__body {
+  min-height: 190px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero__body .decor {
+  position: absolute;
+  z-index: -1;
+  top: 20%;
+}
+
+.hero__body .decor:first-child {
+  left: 0;
+}
+
+.hero__body .decor:last-child {
+  right: 0;
+}
+
 .collection {
   position: relative;
 }
@@ -3166,6 +3244,26 @@ h6.card-title {
   margin-bottom: 45px;
 }
 
+.collection.collection-v3 .collection__text {
+  max-width: 600px;
+}
+
+.collection .link-back {
+  margin-bottom: 5px;
+}
+
+.collection__suptitle {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.1em;
+  color: #282727;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+}
+
 .collection__subtitle {
   font-family: "Sacramento", cursive;
   font-size: 49px;
@@ -3175,6 +3273,10 @@ h6.card-title {
 
 .collection__tilte {
   margin-bottom: 4px;
+}
+
+.collection__head .btn {
+  margin-bottom: 73px;
 }
 
 .collection__text {
@@ -3601,6 +3703,16 @@ h6.card-title {
     color: #8c8c8c;
   }
 
+  .link-back:hover {
+    color: #8c8c8c;
+  }
+
+  .link-back:hover:before {
+    -webkit-transform: translateX(-3px);
+        -ms-transform: translateX(-3px);
+            transform: translateX(-3px);
+  }
+
   .social a:hover {
     background-color: #8c8c8c;
   }
@@ -3993,6 +4105,10 @@ h6.card-title {
     margin-bottom: 25px;
   }
 
+  .hero {
+    margin-bottom: 50px;
+  }
+
   .collection .col-12 {
     margin-bottom: 50px;
   }
@@ -4000,6 +4116,10 @@ h6.card-title {
   .collection.collection-v2 .col-12 {
     margin-bottom: 8px;
     margin-top: 8px;
+  }
+
+  .collection__head .btn {
+    margin-bottom: 10px;
   }
 
   .collection__text {

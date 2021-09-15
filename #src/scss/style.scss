@@ -266,11 +266,10 @@ textarea {
 		min-height: 3.21em;
 		background: #323230;
 		border-radius: 87px;
-		padding: 0.71em 2.35em;
+		padding: 0.71em 2.65em;
 		font-weight: bold;
-		font-size: 14px;
-		line-height: 1.14em;
-		letter-spacing: 0.1em;
+		font-size: 19px;
+		line-height: 1.21em;
 		color: #ffffff;
 		transition: all 0.3s ease;
 
@@ -291,10 +290,10 @@ textarea {
 		min-height: 3.21em;
 		background: #fff;
 		border-radius: 87px;
-		padding: 0.71em 2.35em;
+		padding: 0.71em 2.65em;
 		font-weight: bold;
-		font-size: 14px;
-		line-height: 1.14em;
+		font-size: 19px;
+		line-height: 1.21em;
 
 		color: $textColor;
 		transition: all 0.3s ease;
@@ -313,9 +312,17 @@ textarea {
 	& > i {
 		flex: 0 0 auto;
 		margin-right: 6px;
+
+		&.fa-chevron-right {
+			margin-right: 0;
+			margin-left: 6px;
+			font-size: 0.7em;
+		}
 	}
 }
-
+.bg {
+	background: linear-gradient(0deg, #ffffff, #ffffff), #f7f8fc;
+}
 // === and btn ========================================================================
 
 .input {
@@ -368,7 +375,33 @@ textarea {
 		}
 	}
 }
+.link-back {
+	font-weight: bold;
+	font-size: 14px;
+	line-height: 1.14em;
+	letter-spacing: 0.1em;
+	color: $textColor;
+	transition: all 0.3s ease;
+	display: inline-block;
 
+	&:before {
+		display: inline-block;
+		content: "<";
+		color: inherit;
+		transition: all 0.3s ease;
+		margin-right: -0.4em;
+	}
+
+	@media (min-width: 992px) {
+		&:hover {
+			color: $hover;
+
+			&:before {
+				transform: translateX(-3px);
+			}
+		}
+	}
+}
 .social {
 	padding-left: 0;
 	margin-bottom: 0;
@@ -459,6 +492,7 @@ textarea {
 @import "../common/filter/filter";
 @import "../common/products-slider/products-slider";
 @import "../common/video/video";
+@import "../common/hero/hero";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -466,5 +500,6 @@ textarea {
 @import "pages/home";
 @import "pages/products";
 @import "pages/product-detail";
+@import "pages/lookbook";
 
 // ==== AND PAGES =====================================================
