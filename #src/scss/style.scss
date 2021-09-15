@@ -123,6 +123,7 @@ a:visited {
 }
 a:hover {
 	text-decoration: none;
+	color: inherit;
 }
 ul li {
 	list-style: none;
@@ -457,6 +458,7 @@ textarea {
 @import "../common/pagination/pagination";
 @import "../common/filter/filter";
 @import "../common/products-slider/products-slider";
+@import "../common/video/video";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================

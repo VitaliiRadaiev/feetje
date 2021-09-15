@@ -778,9 +778,16 @@ if(priceSlider) {
 };
 	{
     let promoHeader = document.querySelector('.promo-header');
-    if(promoHeader) {
+    if (promoHeader) {
         let bgSlider = promoHeader.querySelector('.promo-header__bg');
         let textSlider = promoHeader.querySelector('.promo-header__text-slider');
+        let videos = bgSlider.querySelectorAll('.video');
+        let players = [];
+        if (videos.length) {
+            videos.forEach(video => {
+                players.push(videoHandler(video));
+            })
+        }
 
         let DataBgSlider = new Swiper(bgSlider, {
             effect: 'fade',
@@ -790,7 +797,7 @@ if(priceSlider) {
             //loop: true,
             preloadImages: false,
             lazy: {
-            	loadPrevNext: true,
+                loadPrevNext: true,
             },
         });
 
@@ -803,12 +810,30 @@ if(priceSlider) {
             speed: 800,
             //loop: true,
             pagination: {
-            	el: textSlider.querySelector('.swiper-pagination'),
-            	clickable: true,
+                el: textSlider.querySelector('.swiper-pagination'),
+                clickable: true,
             },
+            on: {
+                slideChange: (swiper) => {
+                    players.forEach(player => {
+                        player.pause();
+                    })
+                }
+            }
         });
 
+        players.forEach(player => {
+            player.subscribe('play', () => {
+                DataTextSlider.autoplay.stop();
+            });
+
+            player.subscribe('pause', () => {
+                DataTextSlider.autoplay.start();
+            });
+        })
+
         DataTextSlider.controller.control = DataBgSlider;
+        DataBgSlider.controller.control = DataTextSlider;
 
     }
 };
@@ -980,6 +1005,63 @@ if(priceSlider) {
             }
         })
     }
+};
+	function videoHandler(videoBLock) {
+	if(!videoBLock) return;
+	let video = videoBLock.querySelector('.video__payer');
+	let playBtn = videoBLock.querySelector('.video__play');
+	let pauseBtn = videoBLock.querySelector('.video__pause');
+
+	let playEventsCallback = [];
+	let pauseEventsCallback = [];
+
+	const togglePlayPause = (play) => {
+		if(play) {
+			video.play();
+			playBtn.style.display = 'none';
+			pauseBtn.style.display = 'block';
+
+			if(playEventsCallback.length) {
+				playEventsCallback.forEach(callback => {
+					callback();
+				})
+			}
+		} else {
+			video.pause();
+			playBtn.style.display = 'block';
+			pauseBtn.style.display = 'none';
+
+			if(pauseEventsCallback.length) {
+				pauseEventsCallback.forEach(callback => {
+					callback();
+				})
+			}
+		}
+	}
+
+	playBtn.addEventListener('click', () => {
+		togglePlayPause(true);
+	})
+	pauseBtn.addEventListener('click', () => {
+		togglePlayPause(false);
+	})
+
+	return {
+		play() {
+			togglePlayPause(true);
+		},
+		pause() {
+			togglePlayPause(false);
+		},
+		subscribe(string, callback) {
+			if(string === 'play') {
+				playEventsCallback.push(callback);
+			} else if (string === 'pause') {
+				pauseEventsCallback.push(callback);
+			}
+		}
+	}
+
 };
 	//@@includ e('../common/popup/popup.js');
 

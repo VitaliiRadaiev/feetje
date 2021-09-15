@@ -24,6 +24,7 @@
         z-index: 2;
         min-height: 100vh;
         min-width: 0;
+        pointer-events: none;
 
         & .link-arrow-right {
             margin-bottom: 20px;
@@ -34,8 +35,10 @@
         min-width: 0;
         width: 100%;
         padding-bottom: 54px;
+        margin-top: 100px;
         & .swiper-slide {
             padding-top: 20px;
+            pointer-events: auto;
         }
         & .swiper-pagination {
             bottom: 18px;

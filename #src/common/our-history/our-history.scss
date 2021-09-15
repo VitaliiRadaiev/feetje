@@ -9,6 +9,22 @@
         }
     }
 
+    &__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 100%;
+        max-width: 232px;
+
+        & img {
+            position: static;
+            width: 100%;
+            height: auto;
+        }
+    }
+
     &__text-wrap {
         @media (min-width: 768px) {
             padding-top: 80px;
