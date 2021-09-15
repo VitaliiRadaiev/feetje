@@ -2270,7 +2270,7 @@ textarea {
 .promo-header__body {
   position: relative;
   z-index: 2;
-  min-height: 100vh;
+  min-height: 700px;
   min-width: 0;
   pointer-events: none;
 }
@@ -2283,7 +2283,7 @@ textarea {
   min-width: 0;
   width: 100%;
   padding-bottom: 54px;
-  margin-top: 100px;
+  margin-top: 200px;
 }
 
 .promo-header__text-slider .swiper-slide {
@@ -3075,7 +3075,7 @@ h6.card-title {
 
 .video__control {
   position: absolute;
-  top: 40%;
+  top: 195px;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
@@ -3882,6 +3882,10 @@ h6.card-title {
 
   .footer__partners-items > a:not(:last-child) {
     margin-right: 15px;
+  }
+
+  .promo-header__text-slider {
+    margin-top: 100px;
   }
 
   .promo-header__bottom-item {
