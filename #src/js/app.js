@@ -34,6 +34,7 @@ window.addEventListener('load', function () {
 	@@include('../common/instagram/instagram.js');
 	@@include('../common/products-card/products-card.js');
 	@@include('../common/filter/filter.js');
+	@@include('../common/products-slider/products-slider.js');
 	//@@includ e('../common/popup/popup.js');
 
 

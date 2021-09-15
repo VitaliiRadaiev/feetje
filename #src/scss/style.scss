@@ -280,6 +280,39 @@ textarea {
 			}
 		}
 	}
+
+	&.btn-light {
+		border: none;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		min-height: 3.21em;
+		background: #fff;
+		border-radius: 87px;
+		padding: 0.71em 2.35em;
+		font-weight: bold;
+		font-size: 14px;
+		line-height: 1.14em;
+
+		color: $textColor;
+		transition: all 0.3s ease;
+		border: 1px solid #000000;
+		font-weight: 700;
+
+		@media (min-width: 992px) {
+			&:hover {
+				background-color: $mainColor2;
+				color: $textColor;
+				border-color: $mainColor2;
+			}
+		}
+	}
+
+	& > i {
+		flex: 0 0 auto;
+		margin-right: 6px;
+	}
 }
 
 // === and btn ========================================================================
@@ -358,9 +391,10 @@ textarea {
 		border-radius: 50%;
 		padding: 10px;
 		background-color: $mainColor2;
-		transition: all .3s ease;
+		transition: all 0.3s ease;
 
-		& img, & svg {
+		& img,
+		& svg {
 			max-width: 100%;
 			max-height: 100%;
 			width: auto;
@@ -377,6 +411,10 @@ textarea {
 
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
+	font-size: 21px;
+	line-height: 1.43em;
+	letter-spacing: -0.01em;
+
 	& h1 {
 	}
 	& h2 {
@@ -392,6 +430,7 @@ textarea {
 	}
 
 	& p {
+		margin-bottom: 1.4em;
 	}
 
 	& ul {
@@ -417,11 +456,13 @@ textarea {
 @import "../common/products-card/products-card";
 @import "../common/pagination/pagination";
 @import "../common/filter/filter";
+@import "../common/products-slider/products-slider";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
 
 @import "pages/home";
 @import "pages/products";
+@import "pages/product-detail";
 
 // ==== AND PAGES =====================================================

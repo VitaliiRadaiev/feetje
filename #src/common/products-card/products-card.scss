@@ -46,6 +46,24 @@
         }
     }
 
+    &__img {
+        height: 275px;
+        margin-bottom: 23px;
+        overflow: hidden;
+
+        @media (min-width: 992px) {
+            &:hover {
+                & img {
+                    transform: scale(1.03);
+                }
+            }
+        }
+
+        & img {
+            transition: all 1s ease;
+        }
+    }
+
     &__title {
         font-weight: bold;
         font-size: 24px;
