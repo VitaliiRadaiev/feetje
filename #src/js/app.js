@@ -50,6 +50,17 @@ window.addEventListener('load', function () {
 			}
 		})
 	}
+	let gridItem = document.querySelectorAll('.grid-item');
+	if(gridItem.length) {
+		gridItem.forEach(item => {
+			let decor = item.querySelector('.decor');
+			if(decor) {
+				if(document.documentElement.clientWidth < 576) {
+					item.style.display = 'none';
+				}
+			}
+		})
+	}
 	
 });
 

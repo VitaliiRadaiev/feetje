@@ -21,6 +21,18 @@
                 margin-bottom: 40px;
             }
         }
+
+        &:not(.products-slider_3-items) {
+            & .head {
+                & .head__text,  & .btn{
+                    margin-bottom: 39px;
+
+                    @media (max-width: $md3+px) {
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
     }
 
     &.products-slider_3-items {
