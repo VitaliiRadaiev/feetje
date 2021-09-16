@@ -1,6 +1,5 @@
 .hero {
     background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F7F8FC;
-    margin-bottom: 71px;
     position: relative;
 
     &:before {
@@ -12,10 +11,6 @@
         height: 100%;
         z-index: 1;
         background: linear-gradient(90deg, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
-    }
-
-    @media (max-width: $md3+px) {
-        margin-bottom: 50px;
     }
 
     &__body {
@@ -39,7 +34,21 @@
     &__title {
     }
 }
-.container {
-}
-.title-1 {
+
+
+.hero-v2 {
+    & .head__text  {
+        margin-bottom: 60px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__img {
+        height: 470px;  
+
+        @media (max-width: $md3+px) {
+            height: 370px;
+        }
+    }
 }

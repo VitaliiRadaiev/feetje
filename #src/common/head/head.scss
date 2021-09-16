@@ -1,0 +1,35 @@
+.head {
+
+    &__suptitle {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 1.14em;
+        letter-spacing: 0.1em;
+        color: $textColor;
+        transition: all 0.3s ease;
+        margin-bottom: 5px;
+    }
+
+    &__title {
+        margin-bottom: 4px;
+    }
+
+    &__group {
+        & .btn {
+            margin-bottom: 73px;
+
+            @media (max-width: $md3+px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__text {
+        max-width: 600px;
+        margin-bottom: 73px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
+    }
+}

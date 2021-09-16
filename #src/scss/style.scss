@@ -255,6 +255,13 @@ textarea {
 	}
 }
 
+.pt-70	{
+	padding-top: 70px;
+	@media (max-width: $md3+px) {
+		padding-top: 50px;
+	}
+}
+
 // === btn ========================================================================
 .btn {
 	&.btn-dark {
@@ -321,7 +328,10 @@ textarea {
 	}
 }
 .bg {
-	background: linear-gradient(0deg, #ffffff, #ffffff), #f7f8fc;
+	background: #FDFCFA;
+}
+.bg-gradient {
+	background: linear-gradient(180deg, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 // === and btn ========================================================================
 
@@ -442,7 +452,12 @@ textarea {
 		}
 	}
 }
-
+.bottom-btn-wrap {
+	padding-top: 90px;
+	@media (max-width: $md3+px) {
+		padding-top: 40px;
+	}
+}
 // === TEXT CONTETN BLOCK ========================================================================
 .text-content {
 	font-size: 21px;
@@ -493,6 +508,7 @@ textarea {
 @import "../common/products-slider/products-slider";
 @import "../common/video/video";
 @import "../common/hero/hero";
+@import "../common/head/head";
 // ==== BLOCKS =====================================================
 
 // ==== PAGES =====================================================
@@ -501,5 +517,7 @@ textarea {
 @import "pages/products";
 @import "pages/product-detail";
 @import "pages/lookbook";
+@import "pages/thema";
+@import "pages/collection-detail";
 
 // ==== AND PAGES =====================================================

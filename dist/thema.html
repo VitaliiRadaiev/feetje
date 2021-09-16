@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>New Project</title>
+	<meta name="format-detection" content="telephone=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Sen:wght@400;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		body.is-load ._preload-body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		body.is-load ._preload-body:before {
+			display: none;
+		}
+
+		._preload-body {
+			background-color: #fff;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+			transition: all .6s ease .2s;
+		}
+
+		._preload-body:before {
+			position: absolute;
+			content: '';
+			z-index: 999;
+			top: 50%;
+			left: 50%;
+			height: 50px;
+			width: 50px;
+			border-radius: 50%;
+			border: 4px solid #6e6e6e;
+			border-right: 4px solid #fff;
+			transform: translate(-50%, -50%);
+			animation: preloadBody 2s linear infinite;
+		}
+
+		@keyframes preloadBody {
+			from {
+				transform: translate(-50%, -50%) rotate(0);
+			}
+
+			to {
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+		}
+	</style>
+	
+<script src="js/vendors.js"></script>
+<script src="js/app.js"></script>
+<!-- <script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7Q82l2QjSzJJk1uUW3OzUBGPTlbk8w1g&callback=initMap&libraries=&v=weekly"
+defer
+></script> -->
+</head>
+
+<body>
+    <div class="_preload-body"></div>
+    <!-- == TOP LINE ================== -->
+    <header class="header">
+    <div class="header__body container">
+        <div class="header__logo">
+            <a href="#">
+                <img src="img/logo/logo.svg" alt="logo">
+            </a>
+        </div>
+        <nav class="header__menu">
+            <ul class="nav">
+                <li class="nav-item menu-item-has-children">
+                    <a class="nav-link" href="#">shop</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a class="nav-link" href="#">Omega</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Rado</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Longines</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Tissot</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Balmain</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Certina</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Calvin Klein</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item menu-item-has-children">
+                    <a class="nav-link" href="#">basiscollectie</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a class="nav-link" href="#">Omega</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Rado</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Longines</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Tissot</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Balmain</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Certina</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Calvin Klein</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item menu-item-has-children">
+                    <a class="nav-link" href="#">lookbook</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a class="nav-link" href="#">Omega</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Rado</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Longines</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Tissot</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Balmain</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Certina</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="#">Calvin Klein</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">over ons</a>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" class="btn btn-dark">store locator</a>
+        <div class="header__language" data-da="header__menu,last,575.98">
+            <div class="header__language-title">NL</div>
+            <ul class="header__language-list">
+                <li>
+                    <a href="#">EN</a>
+                </li>
+                <li>
+                    <a href="#">PL</a>
+                </li>
+            </ul>
+        </div>
+        <div class="header__burger">
+            <div class="burger-wrap">
+                <div class="burger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+    <!-- == // TOP LINE ================== -->
+
+
+    <main class="_page thema-page _padding-top">
+        <section class="hero _parallax">
+			<div class="hero__body d-flex flex-column justify-content-center align-items-center pt-4 pb-4 container">
+				<div class="decor layer" data-depth="0.30">
+					<img src="img/photo/decor.png" alt="">
+				</div>
+				<h1 class="hero__title title-1">Thema overzicht</h1>
+				<div class="decor layer" data-depth="0.30">
+					<img src="img/photo/decor.png" alt="">
+				</div>
+			</div>
+		</section>
+
+        <section class="products-slider products-slider_3-items products-slider_v2 mb-0">
+            <div class="container">
+                <div class="head">
+                    <div class="head__suptitle">SUBTITEL</div>
+					<div class="head__title title-1">Titel collectie</div>
+					<div class="head__group d-flex flex-wrap">
+						<div class="head__text text me-auto pe-sm-4">
+							Lief, zacht en dromerig kenmerken de items. Met speelse elementen voor je ontdekkende dreumes.
+						</div>
+						<div>
+							<a href="#" class="btn btn-dark">
+								Bekijk de collectie
+								<i class="fas fa-chevron-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+                <div class="products-slider__body">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-4.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-5.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-6.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-4.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-5.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-6.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-slider__controlls controlls">
+                        <div class="controlls__btn controlls__btn-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="controlls__btn controlls__btn-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-slider products-slider_v2 mb-0 bg">
+            <div class="container">
+                <div class="head">
+					<div class="head__title title-2">Titel collectie</div>
+					<div class="head__group d-flex flex-wrap">
+						<div class="head__text text me-auto pe-sm-4">
+							Lief, zacht en dromerig kenmerken de items. Met speelse elementen voor je ontdekkende dreumes.
+						</div>
+						<div>
+							<a href="#" class="btn btn-dark">
+								Bekijk de collectie
+								<i class="fas fa-chevron-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+                <div class="products-slider__body">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-1.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-2.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-3.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-4.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-1.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-slider__controlls controlls">
+                        <div class="controlls__btn controlls__btn-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="controlls__btn controlls__btn-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-slider products-slider_3-items products-slider_v2 mb-0">
+            <div class="container">
+                <div class="head">
+                    <div class="head__suptitle">SUBTITEL</div>
+					<div class="head__title title-1">Titel collectie</div>
+					<div class="head__group d-flex flex-wrap">
+						<div class="head__text text me-auto pe-sm-4">
+							Lief, zacht en dromerig kenmerken de items. Met speelse elementen voor je ontdekkende dreumes.
+						</div>
+						<div>
+							<a href="#" class="btn btn-dark">
+								Bekijk de collectie
+								<i class="fas fa-chevron-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+                <div class="products-slider__body">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-4.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-5.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-6.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-4.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-5.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="card card-2">
+                                    <div class="card-bg ibg">
+                                        <img src="img/photo/card-2-img-6.jpg" alt="">
+                                    </div>
+                                    <div
+                                        class="card-body p-4 d-flex flex-column text-content justify-content-end align-items-center">
+                                        <h6 class="card-title">Titel basis</h6>
+                                        <span href="#" class="link-arrow-right">Bekijk meer</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-slider__controlls controlls">
+                        <div class="controlls__btn controlls__btn-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="controlls__btn controlls__btn-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-btn-wrap text-center">
+                    <a href="#" class="btn btn-dark">
+                        Bekijk de collectie
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-slider products-slider_v2 bg mb-100">
+            <div class="container">
+                <div class="head">
+					<div class="head__title title-2">Titel collectie</div>
+					<div class="head__group d-flex flex-wrap">
+						<div class="head__text text me-auto pe-sm-4">
+							Lief, zacht en dromerig kenmerken de items. Met speelse elementen voor je ontdekkende dreumes.
+						</div>
+						<div>
+							<a href="#" class="btn btn-dark">
+								Bekijk de collectie
+								<i class="fas fa-chevron-right"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+                <div class="products-slider__body">
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-1.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-2.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-3.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-4.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#" class="products-card">
+                                    <div class="products-card__img ibg">
+                                        <img src="img/photo/products-slider-img-1.jpg" alt="">
+                                    </div>
+                                    <div class="products-card__title">
+                                        Product Titel
+                                    </div>
+                                    <div class="products-card__text">
+                                        2 kleuren
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="products-slider__controlls controlls">
+                        <div class="controlls__btn controlls__btn-prev">
+                            <i class="fas fa-chevron-left"></i>
+                        </div>
+                        <div class="controlls__btn controlls__btn-next">
+                            <i class="fas fa-chevron-right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-btn-wrap text-center">
+                    <a href="#" class="btn btn-dark">
+                        Bekijk de collectie
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="instagram">
+			<div class="container">
+				<h2 class="instagram__title title-2">
+					Volg ons op Instagram! <a href="#">@feetjebaby</a>
+				</h2>
+			</div>
+			<div class="instagram__slider swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide ibg">
+						<a href="#">
+							<img src="img/photo/inst-img-1.jpg" alt="">
+							
+						</a>
+					</div>
+					<div class="swiper-slide ibg">
+						<a href="#">
+							<img src="img/photo/inst-img-2.jpg" alt="">
+							
+						</a>
+					</div>
+					<div class="swiper-slide ibg">
+						<a href="#">
+							<img src="img/photo/inst-img-3.jpg" alt="">
+							
+						</a>
+					</div>
+					<div class="swiper-slide ibg">
+						<a href="#">
+							<img src="img/photo/inst-img-4.jpg" alt="">
+							
+						</a>
+					</div>
+					<div class="swiper-slide ibg">
+						<a href="#">
+							<img src="img/photo/inst-img-1.jpg" alt="">
+							
+						</a>
+					</div>
+					<div class="swiper-slide ibg">
+						<a href="#">
+							<img src="img/photo/inst-img-2.jpg" alt="">
+							
+						</a>
+					</div>
+					<div class="swiper-slide ibg">
+						<a href="#">
+							<img src="img/photo/inst-img-3.jpg" alt="">
+							
+						</a>
+					</div>
+					<div class="swiper-slide ibg">
+						<a href="#">
+							<img src="img/photo/inst-img-4.jpg" alt="">
+							
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+    </main>
+
+
+    <!-- == FOOTER ================== -->
+    <footer class="footer _parallax">
+    <div class="footer__body container">
+        <div class="decor layer" data-depth="0.30">
+            <img src="img/photo/decor.png" alt="">
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-4 mb-5 d-flex flex-column align-items-center text-center text-md-start d-md-blck">
+                <div class="footer__logo">
+                    <a href="#">
+                        <img src="img/logo/logo.svg" alt="">
+                    </a>
+                </div>
+                <ul class="footer__list">
+                    <li>
+                        <a href="#" class="footer__link">
+                            over ons
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">
+                            modellen gezocht
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">
+                            voor bedrijven
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" class="footer__link">
+                            collectie
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">
+                            lookbook
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="footer__link">
+                            contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-12 col-md-4 mb-5  text-center">
+                <a href="#" class="btn btn-dark">
+                    Find your store
+                </a>
+            </div>
+            <div class="col-12 col-md-4 mb-5 d-flex flex-column align-items-center align-items-md-end text-center text-md-end">
+                <ul class="social mb-4">
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/facebook.svg" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="img-svg" src="img/icons/instagram.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="footer__partners mt-auto">
+                    <div class="footer__partners-title">andere merken</div>
+                    <div class="footer__partners-items">
+                        <a href="#">
+                            <img src="img/logo/partner-logo-1.png" alt="">
+                        </a>
+                        <a href="#">
+                            <img src="img/logo/partner-logo-2.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+    <!-- == // FOOTER ================== -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/jQueryScripts.min.js"></script>
+</body>
+
+</html>

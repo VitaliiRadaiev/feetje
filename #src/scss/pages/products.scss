@@ -1,6 +1,6 @@
 .products {
     padding-top: 68px;
-    background: linear-gradient(180deg, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+  
     position: relative;
     margin-bottom: 100px;
 
@@ -18,6 +18,14 @@
         top: 0;
         left: 30%;
         z-index: -1;
+    }
+
+    &.products_v2 {
+        & .products-card__images  {
+            @media (min-width: 992px) {
+                height: 275px;
+            }
+        }
     }
 
     &__head {

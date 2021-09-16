@@ -1673,6 +1673,10 @@ textarea {
   margin-bottom: 100px;
 }
 
+.pt-70 {
+  padding-top: 70px;
+}
+
 .btn.btn-dark {
   border: none;
   display: -webkit-inline-box;
@@ -1739,9 +1743,13 @@ textarea {
 }
 
 .bg {
-  background: -webkit-gradient(linear, left bottom, left top, from(#ffffff), to(#ffffff)), #f7f8fc;
-  background: -o-linear-gradient(bottom, #ffffff, #ffffff), #f7f8fc;
-  background: linear-gradient(0deg, #ffffff, #ffffff), #f7f8fc;
+  background: #FDFCFA;
+}
+
+.bg-gradient {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(227, 227, 227, 0.2)), to(rgba(255, 255, 255, 0.2)));
+  background: -o-linear-gradient(top, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
+  background: linear-gradient(180deg, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
 }
 
 .link-arrow-right {
@@ -1852,6 +1860,10 @@ textarea {
   max-height: 100%;
   width: auto;
   height: auto;
+}
+
+.bottom-btn-wrap {
+  padding-top: 90px;
 }
 
 .text-content {
@@ -3039,6 +3051,32 @@ h6.card-title {
   padding-top: 15px;
 }
 
+.products-slider.products-slider_v2 {
+  padding-top: 80px;
+  padding-bottom: 100px;
+}
+
+.products-slider.products-slider_v2 .products-slider__title {
+  margin-bottom: 90px;
+}
+
+.products-slider.products-slider_3-items .controlls {
+  height: 100%;
+}
+
+.products-slider.has-pagination .bottom-btn-wrap {
+  padding-top: 50px;
+}
+
+.products-slider.has-pagination .swiper-pagination {
+  position: static;
+  padding-top: 90px;
+}
+
+.products-slider.has-pagination .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #282727;
+}
+
 .products-slider__title {
   margin-bottom: 43px;
 }
@@ -3154,7 +3192,6 @@ h6.card-title {
   background: -webkit-gradient(linear, left bottom, left top, from(#FFFFFF), to(#FFFFFF)), #F7F8FC;
   background: -o-linear-gradient(bottom, #FFFFFF, #FFFFFF), #F7F8FC;
   background: linear-gradient(0deg, #FFFFFF, #FFFFFF), #F7F8FC;
-  margin-bottom: 71px;
   position: relative;
 }
 
@@ -3189,6 +3226,39 @@ h6.card-title {
 
 .hero__body .decor:last-child {
   right: 0;
+}
+
+.hero-v2 .head__text {
+  margin-bottom: 60px;
+}
+
+.hero-v2__img {
+  height: 470px;
+}
+
+.head__suptitle {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.14em;
+  letter-spacing: 0.1em;
+  color: #282727;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-bottom: 5px;
+}
+
+.head__title {
+  margin-bottom: 4px;
+}
+
+.head__group .btn {
+  margin-bottom: 73px;
+}
+
+.head__text {
+  max-width: 600px;
+  margin-bottom: 73px;
 }
 
 .collection {
@@ -3242,6 +3312,11 @@ h6.card-title {
 
 .collection.collection-v2 .col-12 {
   margin-bottom: 45px;
+}
+
+.collection.collection-v3 {
+  padding-top: 71px;
+  padding-bottom: 100px;
 }
 
 .collection.collection-v3 .collection__text {
@@ -3337,9 +3412,6 @@ h6.card-title {
 
 .products {
   padding-top: 68px;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(227, 227, 227, 0.2)), to(rgba(255, 255, 255, 0.2)));
-  background: -o-linear-gradient(top, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
-  background: linear-gradient(180deg, rgba(227, 227, 227, 0.2) 0%, rgba(255, 255, 255, 0.2) 100%);
   position: relative;
   margin-bottom: 100px;
 }
@@ -3894,6 +3966,10 @@ h6.card-title {
     padding-right: 50px !important;
   }
 
+  .products.products_v2 .products-card__images {
+    height: 275px;
+  }
+
   .filter__mob-btn {
     display: none;
   }
@@ -4080,6 +4156,14 @@ h6.card-title {
     margin-bottom: 50px;
   }
 
+  .pt-70 {
+    padding-top: 50px;
+  }
+
+  .bottom-btn-wrap {
+    padding-top: 40px;
+  }
+
   .promo-header {
     margin-bottom: 50px;
   }
@@ -4101,12 +4185,37 @@ h6.card-title {
     padding-top: 0;
   }
 
+  .products-slider.products-slider_v2 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .products-slider.products-slider_v2 .products-slider__title {
+    margin-bottom: 40px;
+  }
+
+  .products-slider.has-pagination .swiper-pagination {
+    padding-top: 40px;
+  }
+
   .products-slider__title {
     margin-bottom: 25px;
   }
 
-  .hero {
-    margin-bottom: 50px;
+  .hero-v2 .head__text {
+    margin-bottom: 30px;
+  }
+
+  .hero-v2__img {
+    height: 370px;
+  }
+
+  .head__group .btn {
+    margin-bottom: 20px;
+  }
+
+  .head__text {
+    margin-bottom: 20px;
   }
 
   .collection .col-12 {
@@ -4116,6 +4225,11 @@ h6.card-title {
   .collection.collection-v2 .col-12 {
     margin-bottom: 8px;
     margin-top: 8px;
+  }
+
+  .collection.collection-v3 {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
   .collection__head .btn {
