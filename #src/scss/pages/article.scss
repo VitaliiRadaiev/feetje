@@ -1,0 +1,112 @@
+.article {
+    padding-top: 90px;
+
+    @media (max-width: $md3+px) {
+        padding-top: 40px;
+    }
+
+    &__body {
+        max-width: 733px;
+        margin: 0 auto;
+
+        & > .text-content {
+            max-width: 556px;
+        }
+    }
+}
+
+.text-block {
+    padding: 50px 0 50px;
+
+    &__title {
+        max-width: 443px;
+        margin: 0 auto 33px;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__body {
+        max-width: 584px;
+        margin: 0 auto;
+    }
+}
+
+.text-img-block-list {
+    padding: 30px 0;
+
+    & .text-img-block {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+
+            @media (max-width: $md2+px) {
+                margin-bottom: 50px;
+            }
+        }
+
+
+        @media (min-width: 992px) {
+            &:nth-child(even) {
+                & .text-img-block__body {
+                    & > .container {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-end;
+                    }
+                }
+
+                & .text-img-block__text {
+                    padding-right: 0;
+                    padding-left: 80px;
+                }
+
+                & .text-img-block__img {
+                    right: auto;
+                    left: 0;
+                }
+            }
+        }
+
+    }
+}
+.text-img-block {
+    &__body {
+        position: relative;
+    }
+
+    &__text {
+        @media (min-width: 992px) {
+            width: 50%;
+            min-height: 470px;
+            padding-right: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: $md2+px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__img {
+        min-height: 470px;
+
+        @media (min-width: 992px) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+        }
+
+        @media (max-width: $md2+px) {
+            width: 100%;
+        }
+
+        @media (max-width: $md3+px) {
+            min-height: 370px;
+        }
+    }
+}

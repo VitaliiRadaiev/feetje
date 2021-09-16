@@ -39,7 +39,7 @@
 .hero-v2 {
     & .head__text  {
         margin-bottom: 60px;
-
+        max-width: 740px;
         @media (max-width: $md3+px) {
             margin-bottom: 30px;
         }
