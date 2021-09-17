@@ -6,6 +6,17 @@
         margin-bottom: 50px;
     }
 
+    & > .container {
+        position: relative;
+    }
+
+    & .decor {
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        right: 0;
+    }
+
     &__title {
         margin-bottom: -6px;
     }

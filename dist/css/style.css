@@ -4133,6 +4133,17 @@ h6.card-title {
   margin-bottom: 71px;
 }
 
+.locator > .container {
+  position: relative;
+}
+
+.locator .decor {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 0;
+}
+
 .locator__title {
   margin-bottom: -6px;
 }
