@@ -224,7 +224,7 @@ textarea {
 	font-weight: bold;
 	font-size: 30px;
 	line-height: 120%;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.03em;
 
 	@media (max-width: $md3+px) {
 		font-size: 26px;
@@ -232,6 +232,13 @@ textarea {
 }
 
 .title-5 {
+	font-size: 24px;
+	line-height: 125%;
+	letter-spacing: -0.02em;
+
+	@media (max-width: $md3+px) {
+		font-size: 20px;
+	}
 }
 .title-6 {
 }
@@ -352,6 +359,26 @@ textarea {
 // === and btn ========================================================================
 
 .input {
+	background: #ffffff;
+	border: 1px solid #e7e6e5;
+	border-radius: 87px;
+	display: flex;
+	min-height: 45px;
+	padding: 8px 20px;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1.2em;
+	letter-spacing: -0.01em;
+	color: $textColor;
+	width: 100%;
+
+	&::placeholder {
+		font-weight: bold;
+		font-size: 18px;
+		line-height: 1.2em;
+		letter-spacing: -0.01em;
+		color: #323230;
+	}
 }
 
 .textarea {
@@ -508,7 +535,7 @@ textarea {
 		font-weight: bold;
 		font-size: 30px;
 		line-height: 120%;
-		letter-spacing: -0.05em;
+		letter-spacing: -0.03em;
 		margin-bottom: 0.45em;
 
 		@media (max-width: $md3+px) {
@@ -517,6 +544,14 @@ textarea {
 	}
 
 	& h5 {
+		font-size: 24px;
+		line-height: 125%;
+		letter-spacing: -0.02em;
+		margin-bottom: 0.55em;
+
+		@media (max-width: $md3+px) {
+			font-size: 20px;
+		}
 	}
 	& h6 {
 	}
@@ -543,6 +578,9 @@ textarea {
 		& ~ h4 {
 			margin-top: 2.3em;
 		}
+		& ~ h5 {
+			margin-top: 2.6em;
+		}
 
 		& ~ q {
 			margin-top: 1.42em;
@@ -554,7 +592,7 @@ textarea {
 		position: relative;
 		margin-bottom: 1.4em;
 		font-size: 30px;
-		line-height: 140% ;
+		line-height: 140%;
 		letter-spacing: -0.02em;
 		padding-left: 0.8em;
 
@@ -564,12 +602,12 @@ textarea {
 
 		&:before {
 			position: absolute;
-			content: '';
+			content: "";
 			top: 0;
 			left: 0;
 			height: 100%;
 			width: 4px;
-			background: #DBCEC4;
+			background: #dbcec4;
 		}
 	}
 
@@ -636,5 +674,6 @@ textarea {
 @import "pages/collection-detail";
 @import "pages/article";
 @import "pages/about";
+@import "pages/locator";
 
 // ==== AND PAGES =====================================================

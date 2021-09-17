@@ -61,6 +61,8 @@ window.addEventListener('load', function () {
 			}
 		})
 	}
+
+	createTabs('.online-stores', '.online-stores__trigger', '.online-stores__tab');
 	
 });
 
@@ -91,4 +93,5 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 //@@include('plagins/lazy-load.js');
+
 

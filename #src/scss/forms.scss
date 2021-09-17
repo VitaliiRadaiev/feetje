@@ -33,6 +33,31 @@
 //<SELECT (sel+tab)>====================================================================================================
 .select-wrap {
 	display: flex;
+
+	&.select_v2 {
+		& .select__title {
+			min-height: 45px;
+			border: 1px solid #e7e6e5;
+			border-radius: 87px;
+			min-width: 210px;
+			display: inline-flex;
+			align-items: center;	
+			padding-top: 8px;
+			padding-bottom: 8px;
+			padding-left: 20px;	
+			padding-right: 30px;	
+		}
+
+		& .select__value {
+			&:before {
+				right: 15px;
+			}
+		}
+
+		& .select__options {
+			left: 0;
+		}
+	}
 }
 .select-label {
 	margin-right: 4px;
