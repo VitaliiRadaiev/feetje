@@ -221,6 +221,14 @@ textarea {
 }
 
 .title-4 {
+	font-weight: bold;
+	font-size: 30px;
+	line-height: 120%;
+	letter-spacing: -0.05em;
+
+	@media (max-width: $md3+px) {
+		font-size: 26px;
+	}
 }
 
 .title-5 {
@@ -627,5 +635,6 @@ textarea {
 @import "pages/thema";
 @import "pages/collection-detail";
 @import "pages/article";
+@import "pages/about";
 
 // ==== AND PAGES =====================================================

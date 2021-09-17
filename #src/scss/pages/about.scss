@@ -1,0 +1,187 @@
+.about {
+    padding-bottom: 1px;
+    margin-bottom: 71px;
+
+    @media (max-width: $md3+px) {
+        margin-bottom: 50px;
+        padding-bottom: 30px;
+    }
+    & .head__text {
+        margin: 0 auto 62px;
+        max-width: 805px;
+        line-height: 1.36em;
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__body {
+        position: relative;
+        padding-top: 60px;
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 50%;
+            height: 100%;
+            width: 2px;
+            transform: translateX(-50%);
+            background: #DBCEC4;
+
+            @media (max-width: $md2+px) {
+                left: 165px;
+            }
+
+            @media (max-width: $md3+px) {
+                left: 0px;
+            }
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            z-index: 5;
+            top: 0;
+            left: -4px;
+            right: -4px;
+            width: calc(100% + 8px);
+            height: 50px;
+            /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+100;White+to+Transparent */
+background: -moz-linear-gradient(top,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+
+        }
+    }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 180px;
+        position: relative;
+
+        @media (max-width: $md2+px) {
+            flex-direction: row-reverse;
+        }
+
+        @media (max-width: $md3+px) {
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+            padding-left: 20px;
+        }
+
+        &:before {
+            position: absolute;
+            content: "";
+            top: 12px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #DBCEC4;
+
+            @media (max-width: $md2+px) {
+                left: 165px;
+            }
+
+            @media (max-width: $md3+px) {
+                left: 0;
+            }
+        }
+
+        @media (min-width: 992px) {
+            &:nth-child(even) {
+                flex-direction: row-reverse;
+    
+                & .about__item-time {
+                    text-align: right;
+                }
+    
+                & .about__item-text-wrap {
+                    flex-direction: row-reverse;
+                    text-align: left;
+                }
+            }
+        }
+
+
+        &:last-child {
+            &:after {
+                position: absolute;
+                content: '';
+                left: 50%;
+                bottom: 0;
+                height: calc(100% - 24px);
+                width: 6px;
+                background-color: #fff;
+                transform: translateX(-50%);
+
+                @media (max-width: $md2+px) {
+                    left: 165px;
+                }
+
+                @media (max-width: $md3+px) {
+                    left: 0;
+                }
+            }
+        }
+    }
+
+    &__item-col-1 {
+        flex: 0 1 calc(50% - 25px);
+
+        @media (max-width: $md2+px) {
+            flex: 1 1 auto;
+        }
+    }
+
+    &__item-col-2 {
+        flex: 0 1 calc(50% - 25px);
+        @media (max-width: $md2+px) {
+            flex: 0 0 140px;
+            margin-right: 50px;
+        }
+
+        @media (max-width: $md3+px) {
+            flex: 0 1 100%;
+            margin-right: 0;
+            margin-bottom: 20px;
+            order: -1;
+        }
+    }
+
+    &__item-text-wrap {
+        text-align: right;
+
+        @media (max-width: 575.98px) {
+            text-align: left;
+        }
+    }
+
+    &__item-img {
+        height: 275px;
+
+        @media (max-width: 575.98px) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item-title {
+    }
+
+    &__item-text {
+        font-size: 16px;
+        line-height: 1.5em;
+        letter-spacing: -0.01em;
+    }
+
+    &__item-time {
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 120%;
+        letter-spacing: -0.02em;
+    }
+}
